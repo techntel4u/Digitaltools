@@ -316,3 +316,9 @@ footer p { margin: 0; }
 .g3x3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 900px) { .g3x3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .g3x3 { grid-template-columns: 1fr; } }
+
+/* Resource blocks: stack title, description and label with spacing */
+.res .rt, .res .rd, .res .rk { display: block; }
+.res .rt { margin-bottom: 6px; }
+.res .rd { margin-top: 0; }
+.res .rk { margin-top: 8px; }
