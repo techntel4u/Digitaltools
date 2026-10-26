@@ -322,3 +322,6 @@ footer p { margin: 0; }
 .res .rt { margin-bottom: 6px; }
 .res .rd { margin-top: 0; }
 .res .rk { margin-top: 8px; }
+footer .wrap { flex-wrap: nowrap; align-items: center; }
+footer p { white-space: nowrap; }
+@media (max-width: 860px) { footer .wrap { flex-wrap: wrap; } footer p { white-space: normal; } }
