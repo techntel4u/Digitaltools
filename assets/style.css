@@ -288,3 +288,28 @@ footer p { margin: 0; }
 .grid > .side-box + .side-box { margin-top: 0; }
 .g2-fixed { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 640px) { .g2-fixed { grid-template-columns: 1fr; } }
+
+/* Coloured question-type cards */
+.qcard { padding: 0; overflow: hidden; border-top: 0; }
+.qcard .qc-head { display: flex; align-items: center; gap: 10px; margin: 0; padding: 14px 20px; color: #fff; font-weight: 800; font-size: 17px; letter-spacing: -.01em; justify-content: flex-start; }
+.qcard .qc-head i { width: 32px; height: 32px; border-radius: 10px; background: rgba(255,255,255,.22); display: grid; place-items: center; font-size: 15px; }
+.qcard .qc-body { padding: 16px 20px 18px; display: flex; flex-direction: column; flex: 1; }
+.qc-purple .qc-head { background: var(--purple); }
+.qc-pink .qc-head { background: var(--pink); }
+.qc-blue .qc-head { background: var(--blue); }
+.qc-yellow .qc-head { background: var(--yellow); color: var(--ink); }
+.qc-yellow .qc-head i { background: rgba(27,21,48,.1); }
+.qc-green .qc-head { background: var(--green); }
+.qc-purple .mini li::marker { color: var(--purple); }
+.qc-pink .mini li::marker { color: var(--pink); }
+.qc-blue .mini li::marker { color: var(--blue); }
+.qc-yellow .mini li::marker { color: #b07d00; }
+.qc-green .mini li::marker { color: var(--green); }
+.qc-purple { border-color: #d9c8fb; } .qc-pink { border-color: #f8c3da; } .qc-blue { border-color: #c4d8fd; } .qc-yellow { border-color: #ffe39a; } .qc-green { border-color: #b4e6cb; }
+.qc-figure { margin: 4px 0 12px; }
+.qc-figure img { border-radius: 12px; border: 1px solid var(--line); max-width: 240px; width: 100%; }
+.qc-figure figcaption { font-size: 14px; font-weight: 600; margin-top: 8px; }
+.qc-figure figcaption a { text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+.qc-split { display: grid; grid-template-columns: 1fr 160px; gap: 16px; align-items: start; }
+.qc-split .qc-figure { margin: 0 0 12px; }
+@media (max-width: 480px) { .qc-split { grid-template-columns: 1fr; } .qc-split .qc-figure img { max-width: 220px; } }
