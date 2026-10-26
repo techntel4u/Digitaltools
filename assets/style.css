@@ -313,3 +313,6 @@ footer p { margin: 0; }
 .qc-split { display: grid; grid-template-columns: 1fr 160px; gap: 16px; align-items: start; }
 .qc-split .qc-figure { margin: 0 0 12px; }
 @media (max-width: 480px) { .qc-split { grid-template-columns: 1fr; } .qc-split .qc-figure img { max-width: 220px; } }
+.g3x3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .g3x3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .g3x3 { grid-template-columns: 1fr; } }
