@@ -20,3 +20,7 @@ Live site: https://techntel4u.github.io/Digitaltools/
 Plain HTML, no build step. Shared styles are in `assets/style.css` and small helpers (copy buttons, ticks, resource filters) in `assets/site.js`. Slide thumbnails for the demo lesson are in `assets/img/`, and the sample Wayground deck is in `downloads/`.
 
 To change the Google Classroom code, search all pages for `brf3fe7o`.
+
+## Ideas for your area (choice board)
+
+The curriculum-area picker on `choice-board.html` is driven by `assets/areas.js`. To add or change an area, edit its entry in `AREAS` (ideas, AI prompt, Library search term and tools tip) and add its key to a group in `GROUPS`. A link such as `choice-board.html?area=maths` opens the page with that area already chosen.

@@ -18,16 +18,29 @@
     say.t = setTimeout(function () { toast.classList.remove('show'); }, 1800);
   }
 
-  // Copy buttons: <button data-copy="text">
-  document.querySelectorAll('[data-copy]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var text = btn.getAttribute('data-copy');
-      var done = function () { say('Copied: ' + text); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done, function () { say('Code: ' + text); });
-      } else { say('Code: ' + text); }
-    });
+  // Copy buttons: <button data-copy="text"> (delegated, so buttons added later work too)
+  function fallbackCopy(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) { return false; }
+  }
+  document.addEventListener('click', function (ev) {
+    var btn = ev.target.closest ? ev.target.closest('[data-copy]') : null;
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy');
+    var label = text.length > 40 ? 'Copied to clipboard' : 'Copied: ' + text;
+    var done = function () { say(label); };
+    var fail = function () { say(fallbackCopy(text) ? label : 'Select the text to copy it'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fail);
+    } else { fail(); }
   });
+  window.slelSay = say;
 
   // "I've done this" ticks: <input type="checkbox" data-done="key"> inside a .card
   function paint(key, on) {

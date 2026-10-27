@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-<link href="assets/style.css?v=202610262221" rel="stylesheet">
+<link href="assets/style.css?v=202610271112" rel="stylesheet">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -46,6 +46,18 @@
       <div class="card" style="display:flex;gap:12px;align-items:flex-start"><i class="fa-solid fa-heart" style="color:var(--pink);font-size:20px;margin-top:3px" aria-hidden="true"></i><p><strong>Inclusion challenge:</strong> which learner does it help, and how?</p></div>
       <div class="card" style="display:flex;gap:12px;align-items:flex-start"><i class="fa-solid fa-shield-halved" style="color:var(--pink);font-size:20px;margin-top:3px" aria-hidden="true"></i><p><strong>Use your own materials,</strong> not learner data.</p></div>
     </div>
+
+    <section class="block area-picker" id="ideas">
+      <h2>Not sure what to make? Get ideas for your area</h2>
+      <p class="sub">Choose your curriculum area for three or four ideas that fit your subject, each linked to the tile that shows you how, plus a prompt you can paste straight into Wayground.</p>
+      <label for="area-select" class="area-label">My curriculum area</label>
+      <div class="select-wrap">
+        <select id="area-select">
+          <option value="">Choose your area…</option>
+        </select>
+      </div>
+      <div id="area-panel" class="area-panel card" hidden aria-live="polite"></div>
+    </section>
 
     <h2 id="board">Pick a tile</h2>
     <p class="sub">Blue tiles are Google Classroom, purple tiles are Wayground. Tick a tile off when you've built it.</p>
@@ -232,6 +244,7 @@
 
   </div>
 </main>
+<script src="assets/areas.js?v=202610271112"></script>
 
 <footer>
   <div class="wrap">
@@ -239,6 +252,6 @@
     <p>Google for Education · Wayground (formerly Quizizz)</p>
   </div>
 </footer>
-<script src="assets/site.js?v=202610262221"></script>
+<script src="assets/site.js?v=202610271112"></script>
 </body>
 </html>
