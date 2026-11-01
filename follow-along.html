@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-<link href="assets/style.css?v=202610271112" rel="stylesheet">
+<link href="assets/style.css?v=202611012305" rel="stylesheet">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,6 +45,7 @@
       <a href="#learner"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i> You're the learner</a>
       <a href="#practice-sets"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Practice Sets</a>
       <a href="#interactive-video"><i class="fa-brands fa-youtube" aria-hidden="true"></i> Interactive Video</a>
+      <a href="#demo-questions"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Questions for your area</a>
       <a href="#groups"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Student groups</a>
       <a href="#slides-to-lesson"><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i> Slides to lesson</a>
       <a href="#demo-lesson"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i> Demo deck</a>
@@ -145,6 +146,20 @@
         </div>
         <label class="done-toggle"><input type="checkbox" data-done="interactive-video"> Got it</label>
       </div>
+    </section>
+
+    <section class="block dq-section" id="demo-questions">
+      <div class="tags"><span class="tag google">Google Classroom</span><span class="tag inclusion">Try it in your subject</span></div>
+      <h2>Try it with a question from your area</h2>
+      <p class="sub">Choose your curriculum area to get one ready-made question for a Practice Set and one for an Interactive Video, with a YouTube video to use. Copy them into the steps above to test each tool with your own subject.</p>
+      <label for="dq-select" class="area-label">My curriculum area</label>
+      <div class="select-wrap">
+        <select id="dq-select">
+          <option value="">Choose your area…</option>
+        </select>
+      </div>
+      <div id="dq-panel" class="dq-panel" hidden aria-live="polite"></div>
+      <p class="dq-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Watch the video before you add the question, and move it to the moment that fits. If a video won't play, the college may restrict that YouTube channel: try another video on the same topic.</p>
     </section>
 
     <section class="block" id="groups">
@@ -432,6 +447,7 @@
     </div>
   </div>
 </main>
+<script src="assets/demo-questions.js?v=202611012305"></script>
 
 <footer>
   <div class="wrap">
@@ -439,6 +455,6 @@
     <p>Google for Education · Wayground (formerly Quizizz)</p>
   </div>
 </footer>
-<script src="assets/site.js?v=202610271112"></script>
+<script src="assets/site.js?v=202611012305"></script>
 </body>
 </html>

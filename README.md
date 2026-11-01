@@ -24,3 +24,7 @@ To change the Google Classroom code, search all pages for `brf3fe7o`.
 ## Ideas for your area (choice board)
 
 The curriculum-area picker on `choice-board.html` is driven by `assets/areas.js`. To add or change an area, edit its entry in `AREAS` (ideas, AI prompt, Library search term and tools tip) and add its key to a group in `GROUPS`. A link such as `choice-board.html?area=maths` opens the page with that area already chosen.
+
+## Questions for your area (follow along)
+
+The area dropdown above the student groups block on `follow-along.html` is driven by `assets/demo-questions.js`. Each area has one Practice Set question (`ps`) and one Interactive Video question (`iv`) with its YouTube link. Choosing an area on either page remembers it on the other.
